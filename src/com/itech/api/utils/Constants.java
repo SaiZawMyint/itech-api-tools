@@ -2,7 +2,16 @@ package com.itech.api.utils;
 
 import java.nio.charset.StandardCharsets;
 
+/**
+ * A constant for Itech API
+ * @author Itech
+ */
 public class Constants {
+    /**
+     * Decode String to UTF-8 representation.
+     * @param str the String
+     * @return decoded String
+     */
     public static String decodeUTF8(String str) {
         try {
             return java.net.URLDecoder.decode(str, StandardCharsets.UTF_8);
@@ -10,10 +19,17 @@ public class Constants {
             return str;
         }
     }
-    public static Boolean isSuccess(int code){
-        return !between(400,599,code);
-    }
-    public static boolean between(int start, int end, int num) {
-        return (num >= start) && (num <= end);
+
+    /**
+     * Encode String to UTF-8 representation.
+     * @param str the String
+     * @return decoded String
+     */
+    public static String encodeUTF8(String str){
+        try {
+            return java.net.URLEncoder.encode(str, StandardCharsets.UTF_8);
+        } catch (Exception e) {
+            return str;
+        }
     }
 }
