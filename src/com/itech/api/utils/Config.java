@@ -1,10 +1,9 @@
 package com.itech.api.utils;
 
-import org.apache.log4j.PropertyConfigurator;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.lang.module.Configuration;
 
 /**
  * A UTIL tool for Itech API.
@@ -42,6 +41,6 @@ public class Config {
                 throw new RuntimeException(ex);
             }
         }
-        PropertyConfigurator.configure(LOG_FILE);
+        //        PropertyConfigurator.configure(LOG_FILE);
     }
 }

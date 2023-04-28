@@ -2,7 +2,8 @@ package com.itech.api.tools.request;
 
 import com.itech.api.tools.Helper;
 import com.itech.api.tools.Response;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.net.http.HttpRequest;
 
@@ -14,7 +15,7 @@ public class POST extends Helper {
     /**
      * Construct a LOGGER
      */
-    private static final Logger LOGGER = Logger.getLogger(POST.class);
+    private static final Logger LOGGER = LogManager.getLogger(POST.class);
 
     /**
      * POST request constructor
@@ -49,7 +50,7 @@ public class POST extends Helper {
         HttpRequest request = this.createPOSTRequest(headers);
         Response response = this.createResponse(request);
         LOGGER.info("Return : status ["+response.getCode()+"] -> body ["+ (response.getData().toString().length() > 0) +"]\n"
-                +response.toString());
+                + response);
         return response;
     }
 

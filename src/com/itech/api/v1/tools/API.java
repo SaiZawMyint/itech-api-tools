@@ -6,9 +6,9 @@ import com.itech.api.tools.request.DELETE;
 import com.itech.api.tools.request.GET;
 import com.itech.api.tools.request.POST;
 import com.itech.api.tools.request.PUT;
-import com.itech.api.utils.Config;
 import com.itech.api.v1.tools.interfaces.API_Interface;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.function.Function;
 
@@ -25,7 +25,7 @@ import java.util.function.Function;
  * @author ITech
  */
 public class API extends ItechAPIException implements API_Interface {
-    private static final Logger LOGGER = Logger.getLogger(API.class);
+    private static final Logger LOGGER = LogManager.getLogger(API.class);
     private Response response;
     private String[] headers;
 
@@ -33,8 +33,8 @@ public class API extends ItechAPIException implements API_Interface {
      * API constructor
      */
     public API() {
-        Config.configureLOG();
-        LOGGER.info("New API generated!");
+//        Config.configureLOG();
+//        LOGGER.info("New API generated!");
     }
 
     /**

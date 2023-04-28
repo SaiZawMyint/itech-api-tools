@@ -2,7 +2,8 @@ package com.itech.api.tools.request;
 
 import com.itech.api.tools.Helper;
 import com.itech.api.tools.Response;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.net.http.HttpRequest;
 
@@ -14,13 +15,16 @@ public class GET extends Helper {
     /**
      * Construct a LOGGER
      */
-    private static final Logger LOGGER = Logger.getLogger(GET.class);
+    private static final Logger LOGGER = LogManager.getLogger(GET.class);
+
 
     /**
      * GET request constructor.
      * @param url GET request url
      */
     public GET(String url) {
+
+
         super(url);
     }
 

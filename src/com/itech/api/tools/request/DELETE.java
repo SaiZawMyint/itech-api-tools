@@ -2,7 +2,8 @@ package com.itech.api.tools.request;
 
 import com.itech.api.tools.Helper;
 import com.itech.api.tools.Response;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.net.http.HttpRequest;
 
@@ -14,7 +15,7 @@ public class DELETE extends Helper {
     /**
      * Construct a LOGGER.
      */
-    private static final Logger LOGGER = Logger.getLogger(DELETE.class);
+    private static final Logger LOGGER = LogManager.getLogger(DELETE.class);
     /**
      * DELETE request constructor.
      * @param url DELETE request url

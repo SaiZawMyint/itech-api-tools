@@ -4,7 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParser;
 import com.itech.api.tools.exceptions.ItechAPIException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.net.http.HttpHeaders;
 import java.net.http.HttpResponse;
@@ -22,7 +23,7 @@ public class Response extends ItechAPIException {
     /**
      * Construct a LOGGER.
      */
-    private static final Logger LOGGER = Logger.getLogger(Response.class);
+    private static final Logger LOGGER = LogManager.getLogger(Response.class);
     /**
      * Request uri
      */
