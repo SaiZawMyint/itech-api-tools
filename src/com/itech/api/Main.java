@@ -1,17 +1,17 @@
 package com.itech.api;
 
-import com.itech.api.utils.Config;
 import com.itech.api.v1.tools.API;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import org.apache.log4j.Logger;
 public class Main {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
     public static void main(String[] args) {
 //        Config.configureLOG();
         LOGGER.info("Thanks for using ItechAPI tool.\n");
         API api = new API();
-        api.get("https://medium-backend-api.onrender.com/api/posts")
+        api.setHeaders(new String[]{"Content-Type", "application/json", "X-Shopify-Access-Token", "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"});
+        api.get("https://test-store-4023.myshopify.com/admin/api/2021-07/shop.json")
                 .then(r->{
                     System.out.println(r);
                     return r;
